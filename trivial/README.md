@@ -1,4 +1,4 @@
-# Poetry Nix Flake
+# Generic Nix Flake
 
 A modern development template using flake-parts, treefmt, and pre-commit hooks.
 
@@ -10,13 +10,7 @@ A modern development template using flake-parts, treefmt, and pre-commit hooks.
 nix develop
 ```
 
-2. Run poetry:
-
-```bash
-poetry run python -m sample_package
-```
-
-3. Format everything:
+2. Format everything:
 
 ```bash
 nix fmt
@@ -24,7 +18,7 @@ nix fmt
 
 This automatically installs git hooks and loads your tools.
 
-4. Verify the flake:
+3. Verify the flake:
 
 ```bash
 nix flake check
