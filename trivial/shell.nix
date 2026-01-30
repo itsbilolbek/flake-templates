@@ -2,7 +2,7 @@
 {
   imports = [
     inputs.treefmt-nix.flakeModule
-    inputs.git-hooks-nix.flakeModule
+    inputs.git-hooks.flakeModule
   ];
 
   perSystem =
