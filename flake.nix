@@ -11,13 +11,12 @@
         description = "A very basic flake";
       };
 
-      python = {
-        path = ./python;
-        description = "Python template, using poetry2nix";
+      python-uv = {
+        path = ./python-uv;
+        description = "Basic flake for Python and UV development";
         welcomeText = ''
           # Getting started
           - Run `nix develop`
-          - Run `poetry run python -m sample_package`
         '';
       };
 

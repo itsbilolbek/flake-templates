@@ -1,4 +1,4 @@
-# Generic Nix Flake
+# Basic flake for Python and UV
 
 A modern development template using flake-parts, treefmt, and pre-commit hooks.
 
