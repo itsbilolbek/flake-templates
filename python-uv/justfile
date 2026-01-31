@@ -1,0 +1,9 @@
+# Set the shell to bash for consistency
+set shell := ["bash", "-c"]
+
+default:
+    @just --list
+
+# Run the application
+run:
+    uv run python -m src.my_package
