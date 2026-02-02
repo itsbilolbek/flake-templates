@@ -51,12 +51,12 @@
           just
           nixd
 
-          # python313
-          # uv
-          stdenv.cc.cc
-          zlib
           basedpyright
           ruff
+
+          # C dynamic libraries for uv to work properly
+          stdenv.cc.cc
+          zlib
         ];
 
         packages = with pkgs; [
