@@ -8,15 +8,15 @@
   perSystem =
     {
       config,
-      # self',
-      # inputs',
       pkgs,
-      # system,
       ...
     }:
     {
       treefmt = {
         projectRootFile = "flake.nix";
+        settings.global.excludes = [
+          "flake.lock"
+        ];
         programs = {
           nixfmt.enable = true;
           prettier.enable = true;
@@ -29,6 +29,9 @@
 
       pre-commit = {
         check.enable = true;
+        settings.excludes = [
+          "flake.lock"
+        ];
         settings.hooks = {
           treefmt.enable = true;
 

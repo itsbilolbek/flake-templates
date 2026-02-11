@@ -2,7 +2,8 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    nixpkgs.url = "github:NixOS/nixpkgs/release-25.11";
+
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     treefmt-nix.url = "github:numtide/treefmt-nix";
@@ -13,13 +14,8 @@
   };
 
   outputs =
-    inputs@{
-      # self,
-      # nixpkgs,
-      flake-parts,
-      ...
-    }:
-    flake-parts.lib.mkFlake { inherit inputs; } {
+    inputs:
+    inputs.flake-parts.lib.mkFlake { inherit inputs; } {
       systems = [
         "x86_64-linux"
         "aarch64-linux"
