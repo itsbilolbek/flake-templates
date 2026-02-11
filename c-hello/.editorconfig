@@ -13,3 +13,9 @@ indent_style = tab
 
 [*.md]
 trim_trailing_whitespace = false
+
+[*.nix]
+indent_size = 2
+
+[*.{yml,yaml,json}]
+indent_size = 2

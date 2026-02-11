@@ -1,8 +1,9 @@
 {
-  description = "A very basic flake";
+  description = "C hello world template using CMake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+
     flake-parts.url = "github:hercules-ci/flake-parts";
 
     treefmt-nix.url = "github:numtide/treefmt-nix";
@@ -22,6 +23,7 @@
       ];
 
       imports = [
+        ./package.nix
         ./shell.nix
       ];
     };

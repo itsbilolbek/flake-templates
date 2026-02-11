@@ -1,16 +1,19 @@
 name: "Flake Check"
 on:
-    pull_request:
-    push:
-        branches:
-            - main
+  pull_request:
+  push:
+    branches:
+      - main
 jobs:
-    check:
-        runs-on: ubuntu-latest
-        steps:
-            - name: Checkout repository
-              uses: actions/checkout@v4
-            - name: Install Nix
-              uses: DeterminateSystems/nix-installer-action@main
-            - name: Check Flake evaluation
-              run: nix flake check --all-systems --show-trace --verbose
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@main
+      - name: Generate Compilation Database
+        # Clang-tidy needs this to work in the next step
+        run: nix develop --command cmake -B build -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
+      - name: Check Flake evaluation
+        run: nix flake check --all-systems --show-trace --verbose

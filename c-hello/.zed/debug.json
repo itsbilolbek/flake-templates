@@ -1,0 +1,9 @@
+[
+  {
+    "label": "Debug native binary",
+    "adapter": "CodeLLDB",
+    "program": "$ZED_WORKTREE_ROOT/build/src/hello_world",
+    "request": "launch",
+    "build": "Prepare debug build"
+  }
+]

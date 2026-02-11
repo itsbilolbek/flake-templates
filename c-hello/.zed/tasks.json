@@ -1,0 +1,9 @@
+[
+  {
+    "label": "Prepare debug build",
+    "command": "cmake -B build -DCMAKE_BUILD_TYPE=Debug && cmake --build build",
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always"
+  }
+]
