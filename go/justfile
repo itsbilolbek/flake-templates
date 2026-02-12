@@ -1,0 +1,23 @@
+# List all the recipes
+default:
+  @just --list
+
+# Initialize the go module (Run once: just init my-project)
+init name:
+  go mod init {{name}}
+
+# Run the project
+run:
+  go run main.go
+
+# Run tests with color and verbosity
+test:
+  go test -v ./...
+
+# Tidy up dependencies (adds missing, removes unused)
+tidy:
+  go mod tidy
+
+# Build a production binary
+build:
+  go build -o out main.go
