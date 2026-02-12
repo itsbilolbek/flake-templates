@@ -1,0 +1,28 @@
+# List all the recipes
+default:
+    @just --list
+
+# Default task: just build the project
+build:
+    make
+
+# Build and execute the main program
+run: build
+    ./hello_world
+
+# Build and execute the test suite
+test:
+    make run_tests
+    ./run_tests
+
+# Clean up build artifacts
+clean:
+    make clean
+
+# Debug the main program with LLDB (Great for Nix/Zed)
+debug: build
+    gdb -x .gdbinit ./hello_world
+
+# Generate LSP info for Zed (Run this once when you start)
+setup-lsp:
+    bear -- make clean all
