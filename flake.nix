@@ -8,8 +8,8 @@
       templates = {
         default = self.templates.trivial;
 
-        c-hello = {
-          path = ./c-hello;
+        cpp-cmake = {
+          path = ./cpp-cmake;
           description = "An over-engineered Hello World in C";
         };
 
