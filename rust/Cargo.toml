@@ -1,0 +1,7 @@
+[package]
+name = "my_assignment_project"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Add crates here later if needed
