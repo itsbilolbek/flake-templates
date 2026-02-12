@@ -1,29 +1,46 @@
 {
   description = "Bilolbek's collection of flake templates";
 
-  outputs = { self }: {
+  outputs =
+    { self }:
+    {
 
-    templates = {
-      default = self.templates.trivial;
+      templates = {
+        default = self.templates.trivial;
 
-      trivial = {
-        path = ./trivial;
-        description = "A very basic flake";
-      };
+        c-hello = {
+          path = ./c-hello;
+          description = "An over-engineered Hello World in C";
+        };
 
-      python-uv = {
-        path = ./python-uv;
-        description = "Basic flake for Python and UV development";
-        welcomeText = ''
-          # Getting started
-          - Run `nix develop`
-        '';
-      };
+        cpp-make = {
+          path = ./cpp-make;
+          description = "Basic cpp template using make";
+        };
 
-      c-hello = {
-        path = ./c-hello;
-        description = "An over-engineered Hello World in C";
+        go = {
+          path = ./go;
+          description = "Basic go template";
+        };
+
+        trivial = {
+          path = ./trivial;
+          description = "A very basic flake";
+        };
+
+        python-uv = {
+          path = ./python-uv;
+          description = "Basic flake for Python and UV development";
+          welcomeText = ''
+            # Getting started
+            - Run `nix develop`
+          '';
+        };
+
+        rust = {
+          path = ./rust;
+          description = "Basic rust template";
+        };
       };
     };
-  };
 }
