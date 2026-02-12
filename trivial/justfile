@@ -1,0 +1,3 @@
+# List all the recipes
+default:
+  @just --list
