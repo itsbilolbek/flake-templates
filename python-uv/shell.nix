@@ -16,6 +16,7 @@
         projectRootFile = "flake.nix";
         settings.global.excludes = [
           "flake.lock"
+          "uv.lock"
         ];
         programs = {
           nixfmt.enable = true;
@@ -31,6 +32,7 @@
         check.enable = true;
         settings.excludes = [
           "flake.lock"
+          "uv.lock"
         ];
         settings.hooks = {
           treefmt.enable = true;
