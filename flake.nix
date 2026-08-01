@@ -41,6 +41,11 @@
           path = ./rust;
           description = "Basic rust template";
         };
+
+        vite-tailwind = {
+        	path = ./vite-tailwind;
+        	description = "Vite with tailwind";
+        };
       };
     };
 }

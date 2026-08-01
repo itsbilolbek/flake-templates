@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    "@xeonlink/prettier-plugin-organize-attributes",
+    "prettier-plugin-css-order",
+    "prettier-plugin-tailwindcss"
+  ],
+  "tailwindStylesheet": "./src/style.css",
+  "attributeGroups": [
+    "^class$",
+    "^(id|name)$",
+    "^(type|src|href)$",
+    "$DEFAULT",
+    "^aria-"
+  ],
+  "attributeSort": "ASC"
+}
