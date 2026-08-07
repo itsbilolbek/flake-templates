@@ -28,6 +28,11 @@
           description = "A very basic flake";
         };
 
+        python-devenv = {
+          path = ./python-devenv;
+          description = "Basic devenv environment for python and uv";
+        };
+
         python-uv = {
           path = ./python-uv;
           description = "Basic flake for Python and UV development";
