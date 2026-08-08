@@ -33,6 +33,12 @@
           description = "Basic devenv environment for python and uv";
         };
 
+        python-script = {
+          path = ./python-script;
+          description = "One file python script with Typer and Loguru";
+          welcomeText = "Enable execution by `chmod +x script.py` and run with `./script.py`";
+        };
+
         python-uv = {
           path = ./python-uv;
           description = "Basic flake for Python and UV development";
